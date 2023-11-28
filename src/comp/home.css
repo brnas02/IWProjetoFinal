@@ -1,0 +1,269 @@
+*
+{
+    margin: 0px;
+    padding: 0px;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+.home
+{
+    width: 100%;
+}
+.home .top_banner
+{
+    max-width: 100%;
+    height: 530px;
+    background: url('http://localhost:3000/images/ps5.webp');
+    background-size: 100%;
+    padding: 70px 60px;
+}
+.home .top_banner .contant
+{
+    position: relative;
+    top: 35%;
+    padding: 11%;
+    margin-left: 64%;
+}
+.home .top_banner .contant .btn
+{
+    background: #000000;
+    border: none;
+    border-radius: 25px;
+    font: bold 25px arial;
+    color: #ffffff;
+    cursor: pointer;
+    padding: 4px;
+    text-decoration: none;
+    transition: 0.5s;
+}
+.home .top_banner .contant .btn:hover
+{
+    background: #ffffff;
+    color: #1100ff;
+}
+.home .mid_banner
+{
+    margin-top: 20px;
+    max-width: 100%;
+    height: 610px;
+    background: url('http://localhost:3000/images/xbox.png');
+    background-size: 100%;
+    padding: 70px 60px;
+}
+.home .mid_banner .contant
+{
+    position: relative;
+    top: 90%;
+    margin-left: 22%;
+}
+.home .mid_banner .contant .btn
+{
+    background: #000000;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font: bold 25px arial;
+    color: #e6e6e6;
+    padding: 4px;
+    text-decoration: none;
+    transition: 0.5s;
+}
+.home .mid_banner .contant .btn:hover
+{    
+    background: #e6e6e6;
+    color: #107c0f;
+}
+.home .bottom_banner
+{
+    margin-top: 20px;
+    max-width: 100%;
+    height: 480px;
+    background: url('http://localhost:3000/images/nintendo.jpg');
+    background-size: 100%;
+    padding: 70px 60px;
+}
+.home .bottom_banner .contant
+{
+    position: relative;
+    top: 50%;
+}
+.home .bottom_banner .contant .btn
+{
+    background: #ffffff;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font: bold 25px arial;
+    color: #e70012;
+    padding: 4px;
+    text-decoration: none;
+    transition: 0.5s;
+}
+.home .bottom_banner .contant .btn:hover
+{
+    background: #e70012;
+    color: #ffffff;
+}
+.home .trending
+{
+    padding: 20px 30px;
+    width: 100%;
+}
+.home .trending .container
+{
+    max-width: 100%;
+    display: flex;
+}
+.home .trending .container .left_box
+{
+    padding: 10px 20px;
+    width: 100%;
+}
+.home .trending .container .left_box .header
+{
+    display: flex;
+    max-width: 100%;
+    padding: 10px 10px;
+    background: #f6f7f8;
+    justify-content: space-between;
+}
+.home .trending .container .left_box .header .heading h2
+{
+    text-transform: uppercase;
+    font-size: 16px;
+    color: #232323;
+    cursor: pointer;
+}
+.home .trending .container .left_box .header .cate
+{
+    display: flex;
+    margin-top: 5px;
+}
+.home .trending .container .left_box .header .cate h3
+{
+    text-transform: capitalize;
+    margin-right: 10px;
+    color: #232323;
+    font-size: 14px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.home .trending .container .left_box .header .cate h3:hover
+{
+    color: #cd1e76;
+}
+.home .trending .container .left_box .products
+{
+    max-width: 100%;
+}
+.home .trending .container .left_box .products button
+{
+    margin-top: 20px;
+    margin-left: 46%;
+    padding: 10px 30px;
+    background: none;
+    outline: none;
+    border: none;
+    border-radius: 20px;
+    color: #ffffff;
+    font-weight: 600;
+    background: #000000;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.home .trending .container .left_box .products button:hover
+{
+    color: #0cc0df;
+    background: #ffffff;
+}
+.home .trending .container .left_box .products .container
+{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+.home .trending .container .left_box .products .container .box
+{
+    width: 320px;
+    height: 420px;
+    padding: 10px 10px;
+    border: 4px solid #f6f7f8;
+    margin-top: 20px;
+    margin-left: 28px;
+    background: #f6f7f8;
+    overflow: hidden;
+    border-radius: 10px;
+}
+.home .trending .container .left_box .products .container .box .img_box
+{
+    display: flex;
+}
+.home .trending .container .left_box .products .container .box .img_box img
+{
+    width: 293px;
+    height: 279px;
+    object-fit: cover;
+}
+.home .trending .container .left_box .products .container .box .img_box .icon
+{
+    display: flex;
+    flex-direction: column;
+    margin-left: 5%;
+    margin-top: 30px;
+    transition: 0.5s;
+}
+.home .trending .container .left_box .products .container .box:hover .img_box .icon
+{
+    margin-left: -15%;
+}
+.home .trending .container .left_box .products .container .box .img_box .icon .icon_box
+{
+    padding: 10px 10px;
+    margin-top: 10px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    z-index: 1;
+    background: #ffffff;
+    transition: 0.5s;
+    cursor: pointer;
+    border-radius: 10px;
+}
+.home .trending .container .left_box .products .container .box .img_box .icon .icon_box:hover
+{
+    color: #ffffff;
+    background: #0cc0df;
+}
+.home .trending .container .left_box .products .container .box .info
+{
+    padding: 10px 10px;
+}
+.home .trending .container .left_box .products .container .box .info h3
+{
+    text-transform: uppercase;
+    font-size: 15px;
+    font-weight: 300;
+}
+.home .trending .container .left_box .products .container .box .info p
+{
+    margin-top: 5px;
+    font-size: 14px;
+}
+.home .trending .container .left_box .products .container .box .info .btn
+{
+    margin-top: 15px;
+    align-items: center;
+    padding: 5px 10px;
+    margin-left: 27%;
+    border: none;
+    background: none;
+    outline: none;
+    background: #ffffff;
+    color: #232323;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.home .trending .container .left_box .products .container .box .info .btn:hover
+{
+     background: #0cc0df;
+     color: #f6f7f8;
+}

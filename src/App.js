@@ -1,25 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react'
+import Nav from './comp/nav'
+import {BrowserRouter} from 'react-router-dom'
+import Rout from './comp/rout'
+import Footer from './comp/footer'
+import Homeproducts from './comp/home_products'
 
-function App() {
+const App = () => {
+  //Página dos produtos da Loja
+  const [shop, setShop] = useState(Homeproducts)
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <>
+    <BrowserRouter>
+    <Nav />
+    <Rout shop={shop}/>
+    <Footer/>
+    </BrowserRouter>
+    </>
+  )
 }
 
-export default App;
+export default App
