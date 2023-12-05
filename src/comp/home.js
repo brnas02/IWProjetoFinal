@@ -2,7 +2,6 @@ import React, { useState } from 'react'
 import './home.css'
 import { Link } from 'react-router-dom'
 import Homeproducts from './home_products'
-import { IoEyeSharp, IoHeart } from "react-icons/io5"
 import { FaCartShopping } from "react-icons/fa6"
 
 const Home = () => {
@@ -61,14 +60,6 @@ const Home = () => {
                                             <div className='box'>
                                                 <div className='img_box'>
                                                     <img src={curElm.img} alt=''></img>
-                                                    <div className='icon'>
-                                                        <div className='icon_box'>
-                                                            <IoEyeSharp />    
-                                                        </div>
-                                                        <div className='icon_box'>
-                                                            <IoHeart /> 
-                                                        </div>
-                                                    </div>
                                                 </div>
                                                 <div className='info'>
                                                     <h3>{curElm.Name}</h3>

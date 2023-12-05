@@ -73,15 +73,10 @@ const Nav = () => {
                 </div>
                 <div className='nav'>
                     <ul>
-                        <li><Link to='/' className='link'>Página Inicial</Link></li>
-                        <li><Link to='/Shop' className='link'>Loja</Link></li>
-                        <li><Link to='/collection' className='link'>Coleção</Link></li>
-                        <li><Link to='/about' className='link'>Sobre</Link></li>
-                        <li><Link to='/contact' className='link'>Contatos</Link></li>
+                        <li><Link to='/Shop' className='link'>PLAYSTATION</Link></li>
+                        <li><Link to='/collection' className='link'>XBOX</Link></li>
+                        <li><Link to='/about' className='link'>NINTENDO</Link></li>
                     </ul>
-                </div>
-                <div className='promo'>
-                    <p>10% de desconto em todos os jogos</p>
                 </div>
             </div>
         </div>

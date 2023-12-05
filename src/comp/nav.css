@@ -18,7 +18,7 @@
 }
 .header .top_header .icon
 {
-    margin-left: 20px;
+    margin-left: 39%;
     font-size: 20px;
 }
 .header .top_header .info p
@@ -66,6 +66,7 @@
     cursor: pointer;
     font-size: 12px;
     margin-right: 30px;
+    margin-top: 10px;
     transition: 0.5s;
     font-weight: 600;
 }
@@ -138,6 +139,7 @@
 .header .last_header .nav ul li
 {
     list-style: none;
+
 }
 .header .last_header .nav ul li .link
 {
@@ -150,18 +152,4 @@
 .header .last_header .nav ul li .link:hover
 {
     color: #0cc0df;
-}
-.header .last_header .promo
-{
-    margin-right: 20px;
-    padding: 10px 20px;
-    background: #fed700;
-    border-radius: 10px;
-}
-.header .last_header .promo p
-{
-    text-transform: uppercase;
-    color: #232323;
-    font-weight: 600;
-    font-size: 14px;
 }

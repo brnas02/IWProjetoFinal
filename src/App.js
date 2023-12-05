@@ -7,7 +7,7 @@ import Homeproducts from './comp/home_products'
 
 const App = () => {
   //Página dos produtos da Loja
-  const [shop, setShop] = useState(Homeproducts)
+  const [shop] = useState(Homeproducts)
   return (
     <>
     <BrowserRouter>
