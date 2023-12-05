@@ -38,27 +38,23 @@ const Shop = ({shop}) => {
                         <h2>Produtos</h2>
                         <div className='products_container'>
                             {
-                                shop.map((curElm) =>
+                                shop?shop.map((curElm) =>
                                 {
                                     return(
                                         <>
                                         <div className='box'>
                                             <div className='img_box'>
-                                                <img src={curElm.img} alt=''></img>
-                                                <div className='icon'>
-                                                    <li><IoEyeSharp /></li>
-                                                    <li><IoHeart /></li>
-                                                </div>
+                                                <img src={curElm.imagem} alt=''></img>
                                             </div>
                                             <div className='detail'>
-                                                <h3>{curElm.Name}</h3>
-                                                <p>{curElm.price} €</p>
+                                                <h3>{curElm.nome}</h3>
+                                                <p>{curElm.preco} €</p>
                                                 <button className='btn'><FaCartShopping /> ADICIONAR</button>
                                             </div>
                                         </div>
                                         </>
                                     )
-                                })
+                                }):null
                             }
                         </div>
                     </div>

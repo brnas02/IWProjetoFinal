@@ -1,20 +1,30 @@
-import React, { useState } from 'react'
+import axios from 'axios'
+import React, { useEffect, useState } from 'react'
 import './home.css'
 import { Link } from 'react-router-dom'
-import Homeproducts from './home_products'
+//import Homeproducts from './home_products'
 import { FaCartShopping } from "react-icons/fa6"
 
 const Home = () => {
-    const [trendingProducts, setTrendingProducts] = useState(Homeproducts)
+    const url = 'https://api.sheety.co/b1ad1de278502cf801c40f536ca9fcc8/restaurantMenu/menuItems';
+    const [trendingProducts, setTrendingProducts] = useState(null)
+
+    //A função seguinte é executada quando o valor é colocado em url 
+    useEffect(() => {
+        axios.get(url)
+            .then(response => {
+                setTrendingProducts(response.data.menuItems);
+            })
+    }, [url])
 
     const filtercate =(x) => {
-        const filterproduct = Homeproducts.filter((curElm) => {
-            return curElm.type === x
+        const filterproduct = trendingProducts.filter((curElm) => {
+            return curElm.tipo === x
         })
         setTrendingProducts(filterproduct)
     }
     const allTrendingProducts = () => {
-        setTrendingProducts(Homeproducts)
+        setTrendingProducts(trendingProducts)
     }
     return (
         <>
@@ -53,23 +63,24 @@ const Home = () => {
                         <div className='products'>
                             <div className='container'>
                                 {
-                                    trendingProducts.map((curElm) =>
+                                    //Se o trendingProducts não for nulo, fazer a seguinte função, caso seja, não executa nada
+                                    trendingProducts?trendingProducts.map((curElm) =>
                                     {
                                         return(
                                             <>
                                             <div className='box'>
                                                 <div className='img_box'>
-                                                    <img src={curElm.img} alt=''></img>
+                                                    <img src={curElm.imagem} alt=''></img>
                                                 </div>
                                                 <div className='info'>
-                                                    <h3>{curElm.Name}</h3>
-                                                    <p>{curElm.price}€</p>
+                                                    <h3>{curElm.nome}</h3>
+                                                    <p>{curElm.preco}€</p>
                                                     <button className='btn'><FaCartShopping /> ADICIONAR</button>
                                                 </div>
                                             </div>
                                             </>
                                         )
-                                    })
+                                    }):null
                                 }
                             </div>
                             <button>Mostrar Mais</button>
