@@ -1,6 +1,5 @@
 import React from 'react'
 import './shop.css'
-import { IoEyeSharp, IoHeart } from "react-icons/io5"
 import { FaCartShopping } from "react-icons/fa6"
 
 const Shop = ({shop}) => {

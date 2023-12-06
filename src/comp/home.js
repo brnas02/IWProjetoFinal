@@ -17,12 +17,6 @@ const Home = () => {
             })
     }, [url])
 
-    const filtercate =(x) => {
-        const filterproduct = trendingProducts.filter((curElm) => {
-            return curElm.tipo === x
-        })
-        setTrendingProducts(filterproduct)
-    }
     const allTrendingProducts = () => {
         setTrendingProducts(trendingProducts)
     }
@@ -34,15 +28,11 @@ const Home = () => {
                     <Link to='/shop' className='btn'><button className='btn'>COMPRE AGORA</button></Link>
                 </div>
             </div>
-        </div>
-        <div className='home'>
             <div className='mid_banner'>
                 <div className='contant'>
                     <Link to='/shop' className='btn'><button className='btn'>COMPRE AGORA</button></Link>
                 </div>
             </div>
-        </div>
-        <div className='home'>
             <div className='bottom_banner'>
                 <div className='contant'>
                     <Link to='/shop' className='btn'><button className='btn'>COMPRE AGORA</button></Link>
@@ -53,11 +43,7 @@ const Home = () => {
                     <div className='left_box'>
                         <div className='header'>
                             <div className='heading'>
-                                <h2 onClick={() => allTrendingProducts ()}>Tendências</h2>
-                            </div>
-                            <div className='cate'>
-                                <h3 onClick={() => filtercate('new')}>Novo</h3>
-                                <h3 onClick={() => filtercate('top')}>Mais Vendido</h3>
+                                <h2 onClick={() => allTrendingProducts ()}>Produtos</h2>
                             </div>
                         </div>
                         <div className='products'>

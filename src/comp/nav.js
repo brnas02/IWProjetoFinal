@@ -74,7 +74,7 @@ const Nav = () => {
                 <div className='nav'>
                     <ul>
                         <li><Link to='/Shop' className='link'>PLAYSTATION</Link></li>
-                        <li><Link to='/collection' className='link'>XBOX</Link></li>
+                        <li><Link to='/' className='link'>XBOX</Link></li>
                         <li><Link to='/about' className='link'>NINTENDO</Link></li>
                     </ul>
                 </div>

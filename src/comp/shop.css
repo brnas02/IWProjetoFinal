@@ -96,7 +96,7 @@
 .shop .container .right_box .products_box .products_container .box
 {
     width: 300px;
-    height: 370px;
+    height: 380px;
     overflow: hidden;
     border: 3px solid #f6f6f6;
     margin-left: 15px;
@@ -146,16 +146,24 @@
     margin-top: 30px;
     padding: 10px 10px;
 }
+.shop .container .right_box .products_box .products_container .box .detail p
+{
+    margin-top: 10px;
+}
 .shop .container .right_box .products_box .products_container .box .detail .btn
 {
-    margin-top: 20px;
-    margin-left: 90px;
-    background: none;
+    margin-top: 15px;
+    align-items: center;
+    padding: 5px 10px;
+    margin-left: 27%;
     border: none;
+    background: none;
+    outline: none;
+    background: #ffffff;
+    color: #232323;
     border-radius: 10px;
     cursor: pointer;
     transition: 0.5s;
-    outline: none;
 }
 .shop .container .right_box .products_box .products_container .box .detail .btn:hover
 {
