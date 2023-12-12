@@ -78,7 +78,7 @@
 .shop .container .right_box .products_box
 {
     max-width: 100%;
-    padding: 10px 120px;
+    padding: 10px 90px;
 }
 .shop .container .right_box .products_box h2
 {
@@ -95,12 +95,14 @@
 }
 .shop .container .right_box .products_box .products_container .box
 {
-    width: 300px;
-    height: 380px;
+    width: 320px;
+    height: 470px;
     overflow: hidden;
     border: 3px solid #f6f6f6;
     margin-left: 15px;
     margin-top: 20px;
+    border-radius: 10px;
+    background-color: #f6f6f6;
 }
 .shop .container .right_box .products_box .products_container .box .img_box
 {
@@ -108,9 +110,12 @@
 }
 .shop .container .right_box .products_box .products_container .box .img_box img
 {
-    width: 210px;
-    height: 210px;
-    margin-left: 40px;
+    width: 293px;
+    height: 279px;
+    margin-top: 10px;
+    object-fit: cover;
+    margin-left: 10px;
+    border-radius: 10px;
 }
 .shop .container .right_box .products_box .products_container .box .img_box .icon
 {

@@ -8,7 +8,7 @@ const Rout = ({shop}) => {
         <>
         <Routes>
             <Route path= '/' element={<Home />}/>
-            <Route path= 'shop' element={<Shop shop={shop}/>}/>
+            <Route path= 'Shop' element={<Shop shop={shop}/>}/>
         </Routes>
         </>
     )

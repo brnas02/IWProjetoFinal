@@ -1,4 +1,4 @@
-const Homeproducts=
+/*const Homeproducts=
 [
     {
         id: 1,
@@ -89,4 +89,4 @@ const Homeproducts=
         type: 'new'
     },
 ]
-export default Homeproducts;
+export default Homeproducts;*/

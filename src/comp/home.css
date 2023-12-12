@@ -184,6 +184,7 @@
     width: 293px;
     height: 279px;
     object-fit: cover;
+    border-radius: 10px;
 }
 .home .trending .container .left_box .products .container .box .info
 {

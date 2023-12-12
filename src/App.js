@@ -4,14 +4,13 @@ import Nav from './comp/nav'
 import {BrowserRouter} from 'react-router-dom'
 import Rout from './comp/rout'
 import Footer from './comp/footer'
-import Homeproducts from './comp/home_products'
 
 const App = () => {
   //Página dos produtos da Loja
   const url = 'https://api.sheety.co/b1ad1de278502cf801c40f536ca9fcc8/restaurantMenu/menuItems';
     const [trendingProducts, setTrendingProducts] = useState(null)
 
-    //A função seguinte é executada quando o valor é colocado em url 
+    //A função seguinte é executada quando o valor é colocado em url
     useEffect(() => {
         axios.get(url)
             .then(response => {

@@ -23,7 +23,9 @@ const Nav = () => {
             </div>
             <div className='mid_header'>
                 <div className='logo'>
+                    <a href="/">
                     <img src='images/logo.png' alt='logo'></img>
+                    </a>
                 </div>
                 <div className='search_box'>
                     <input type='text' value='' placeholder='search'></input>
@@ -74,8 +76,8 @@ const Nav = () => {
                 <div className='nav'>
                     <ul>
                         <li><Link to='/Shop' className='link'>PLAYSTATION</Link></li>
-                        <li><Link to='/' className='link'>XBOX</Link></li>
-                        <li><Link to='/about' className='link'>NINTENDO</Link></li>
+                        <li><Link to='/Shop' className='link'>XBOX</Link></li>
+                        <li><Link to='/Shop' className='link'>NINTENDO</Link></li>
                     </ul>
                 </div>
             </div>
