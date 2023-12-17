@@ -2,7 +2,7 @@ import React from 'react'
 import './shop.css'
 import { FaCartShopping } from "react-icons/fa6"
 
-const Shop = ({shop}) => {
+const Shop = ({shop, Filter}) => {
     return (
         <>
         <div className='shop'>
@@ -15,12 +15,12 @@ const Shop = ({shop}) => {
                         </div>
                         <div className='box'>
                             <ul>
-                                <li>Playstation</li>
-                                <li>Jogos Playstation</li>
-                                <li>Xbox</li>
-                                <li>Jogos Xbox</li>
-                                <li>Nintendo</li>
-                                <li>Jogos Nintendo</li>
+                                <li onClick={() => Filter ("Playstation")}>Playstation</li>
+                                <li onClick={() => Filter ("Jogos Playstation")}>Jogos Playstation</li>
+                                <li onClick={() => Filter ("Xbox")}>Xbox</li>
+                                <li onClick={() => Filter ("Jogos Xbox")}>Jogos Xbox</li>
+                                <li onClick={() => Filter ("Nintendo")}>Nintendo</li>
+                                <li onClick={() => Filter ("Jogos Nintendo")}>Jogos Nintendo</li>
                             </ul>
                         </div>
                     </div>
