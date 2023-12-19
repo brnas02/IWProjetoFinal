@@ -7,7 +7,7 @@ import Footer from './comp/footer'
 
 const App = () => {
   //Página dos produtos da Loja
-  const url = 'https://api.sheety.co/b1ad1de278502cf801c40f536ca9fcc8/restaurantMenu/menuItems';
+  const url = 'https://api.sheety.co/680c2cd96be26e31c9062b1006efe397/restaurantMenu/menuItems';
     
   const [shop, setTrendingProducts] = useState(null)
 
@@ -25,7 +25,7 @@ const App = () => {
       axios.get(url)
           .then(response => {
               setTrendingProducts(response.data.menuItems);
-          })
+          }).catch(error => console.log(error))
   }, [url])
   return (
     <>

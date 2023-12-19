@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 //import Homeproducts from './home_products'
 
 const Home = () => {
-    const url = 'https://api.sheety.co/b1ad1de278502cf801c40f536ca9fcc8/restaurantMenu/menuItems';
+    const url = 'https://api.sheety.co/680c2cd96be26e31c9062b1006efe397/restaurantMenu/menuItems';
 
     //A função seguinte é executada quando o valor é colocado em url 
     useEffect(() => {
