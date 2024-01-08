@@ -18,17 +18,17 @@ const Home = () => {
         <div className='home'>
             <div className='top_banner'>
                 <div className='contant'>
-                    <Link to='/shop' className='btn'><button className='btn'>COMPRE AGORA</button></Link>
+                    <Link to='/Shop' className='btn'><button className='btn'>COMPRE AGORA</button></Link>
                 </div>
             </div>
             <div className='mid_banner'>
                 <div className='contant'>
-                    <Link to='/shop' className='btn'><button className='btn'>COMPRE AGORA</button></Link>
+                    <Link to='/Shop' className='btn'><button className='btn'>COMPRE AGORA</button></Link>
                 </div>
             </div>
             <div className='bottom_banner'>
                 <div className='contant'>
-                    <Link to='/shop' className='btn'><button className='btn'>COMPRE AGORA</button></Link>
+                    <Link to='/Shop' className='btn'><button className='btn'>COMPRE AGORA</button></Link>
                 </div>
             </div>
         </div>      

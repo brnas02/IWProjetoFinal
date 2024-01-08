@@ -1,8 +1,18 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './shop.css'
 import { FaCartShopping } from "react-icons/fa6"
 
-const Shop = ({shop, Filter}) => {
+const Shop = ({shop}) => {
+    const [selectedCategory, setSelectedCategory] = useState(null);
+    
+    const handleCategoryClick = (categoria) => {
+        setSelectedCategory(categoria);
+      };
+    
+    const filteredProducts = selectedCategory
+      ? shop.filter((product) => product.categoria === selectedCategory)
+      : shop;
+
     return (
         <>
         <div className='shop'>
@@ -15,12 +25,12 @@ const Shop = ({shop, Filter}) => {
                         </div>
                         <div className='box'>
                             <ul>
-                                <li onClick={() => Filter ("Playstation")}>Playstation</li>
-                                <li onClick={() => Filter ("Jogos Playstation")}>Jogos Playstation</li>
-                                <li onClick={() => Filter ("Xbox")}>Xbox</li>
-                                <li onClick={() => Filter ("Jogos Xbox")}>Jogos Xbox</li>
-                                <li onClick={() => Filter ("Nintendo")}>Nintendo</li>
-                                <li onClick={() => Filter ("Jogos Nintendo")}>Jogos Nintendo</li>
+                                <li className={selectedCategory === 'PS5' ? 'selected' : ''} onClick={() => handleCategoryClick('PS5')}>Playstation</li>
+                                <li className={selectedCategory === 'jPS5' ? 'selected' : ''} onClick={() => handleCategoryClick('jPS5')}>Jogos Playstation</li>
+                                <li className={selectedCategory === 'XBOX' ? 'selected' : ''} onClick={() => handleCategoryClick('XBOX')}>Xbox</li>
+                                <li className={selectedCategory === 'jXBOX' ? 'selected' : ''} onClick={() => handleCategoryClick('jXBOX')}>Jogos Xbox</li>
+                                <li className={selectedCategory === 'Nintendo' ? 'selected' : ''} onClick={() => handleCategoryClick('Nintendo')}>Nintendo</li>
+                                <li className={selectedCategory === 'jNintendo' ? 'selected' : ''} onClick={() => handleCategoryClick('jNintendo')}>Jogos Nintendo</li>
                             </ul>
                         </div>
                     </div>
@@ -36,25 +46,19 @@ const Shop = ({shop, Filter}) => {
                     <div className='products_box'>
                         <h2>Produtos</h2>
                         <div className='products_container'>
-                            {
-                                shop?shop.map((curElm) =>
-                                {
-                                    return(
-                                        <>
-                                        <div className='box'>
-                                            <div className='img_box'>
-                                                <img src={curElm.imagem} alt=''></img>
-                                            </div>
-                                            <div className='detail'>
-                                                <h3>{curElm.nome}</h3>
-                                                <p>{curElm.preco} €</p>
-                                                <button className='btn'><FaCartShopping /> ADICIONAR</button>
-                                            </div>
-                                        </div>
-                                        </>
-                                    )
-                                }):null
-                            }
+                            {filteredProducts.map((curElm) => (
+                                <div className='box' key={curElm.id}>
+                                    <div className='img_box'>
+                                        <img src={curElm.imagem} alt='' />
+                                    </div>
+                                    <div className='detail'>
+                                        <h3>{curElm.nome}</h3>
+                                        <p>{curElm.preco} €</p>
+                                    <button className='btn'>
+                                        <FaCartShopping /> ADICIONAR </button>
+                                    </div>
+                                </div>
+                            ))}
                         </div>
                     </div>
                 </div>

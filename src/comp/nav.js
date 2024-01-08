@@ -10,6 +10,7 @@ import './nav.css'
 
 const Nav = () => {
     const { loginWithRedirect, logout, user, isAuthenticated } = useAuth0();
+
     return (
         <>
         <div className='header'>
@@ -65,7 +66,6 @@ const Nav = () => {
                         </div>
                         <div className='info'>
                             <h2>{user.name}</h2>
-                            <p>{user.mail}</p>
                         </div>
                         </>
                         :
@@ -75,6 +75,7 @@ const Nav = () => {
                 </div>
                 <div className='nav'>
                     <ul>
+                        <li><Link to='/Shop' className='link'>LOJA</Link></li>
                         <li><Link to='/Shop' className='link'>PLAYSTATION</Link></li>
                         <li><Link to='/Shop' className='link'>XBOX</Link></li>
                         <li><Link to='/Shop' className='link'>NINTENDO</Link></li>
