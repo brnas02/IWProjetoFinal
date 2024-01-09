@@ -2,16 +2,25 @@ import React, { useState } from 'react'
 import './shop.css'
 import { FaCartShopping } from "react-icons/fa6"
 
-const Shop = ({shop}) => {
+const Shop = ({shop, searchQuery }) => {
     const [selectedCategory, setSelectedCategory] = useState(null);
     
     const handleCategoryClick = (categoria) => {
         setSelectedCategory(categoria);
       };
     
-    const filteredProducts = selectedCategory
-      ? shop.filter((product) => product.categoria === selectedCategory)
-      : shop;
+    // Ajuste a lógica de filtragem
+    
+    const filteredProducts = shop.filter((product) => {
+        const categoryMatch =
+            !selectedCategory || product.categoria === selectedCategory;
+
+        const nameMatch =
+            !searchQuery ||
+            product.nome.toLowerCase().includes(searchQuery.toLowerCase());
+
+        return categoryMatch && nameMatch;
+    });
 
     return (
         <>

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { MdLocalShipping } from 'react-icons/md'
 import { AiOutlineSearch } from 'react-icons/ai'
 import { IoMdLogIn } from 'react-icons/io'
@@ -8,8 +8,14 @@ import { useAuth0 } from "@auth0/auth0-react"
 import {Link} from 'react-router-dom'
 import './nav.css'
 
-const Nav = () => {
+const Nav = ({ shop, onSearch }) => {
     const { loginWithRedirect, logout, user, isAuthenticated } = useAuth0();
+
+    const [searchQuery, setSearchQuery] = useState("");
+
+    const handleSearch = () => {
+        onSearch(searchQuery);
+    };
 
     return (
         <>
@@ -29,8 +35,12 @@ const Nav = () => {
                     </a>
                 </div>
                 <div className='search_box'>
-                    <input type='text' value='' placeholder='search'></input>
-                    <button><AiOutlineSearch /></button>
+                    <input 
+                        type='text' 
+                        value={searchQuery} 
+                        onChange={(e) => setSearchQuery(e.target.value)}placeholder='search'>
+                    </input>
+                    <button onClick={handleSearch}><AiOutlineSearch /></button>
                 </div>
                 {
                     isAuthenticated ?
