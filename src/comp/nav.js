@@ -9,7 +9,7 @@ import './nav.css'
 
 const Nav = () => {
     const { loginWithRedirect, logout, user, isAuthenticated } = useAuth0();
-
+    
     return (
         <>
         <div className='header'>
