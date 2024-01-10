@@ -8,6 +8,7 @@ import { Link } from 'react-router-dom'
 import './nav.css'
 
 const Nav = () => {
+    //Utiliza o hook useAuth0 para aceder as funcionalidades de autenticação do Auth0
     const { loginWithRedirect, logout, user, isAuthenticated } = useAuth0();
     
     return (
@@ -29,7 +30,7 @@ const Nav = () => {
                 </div>
                 {
                     isAuthenticated ?
-                    // Se o user aceder à sua conta, o botão de Sair irá aparecer
+                    //Se o user aceder à sua conta, o botão de Sair irá aparecer
                     <div className='user'>
                         <div className='icon'>
                             <RiLogoutCircleLine />
@@ -39,7 +40,7 @@ const Nav = () => {
                         </div>
                     </div>
                 :
-                // Se o user não estiver conectado com as sua conta, aparece o botão de Entrar
+                //Se o user não estiver conectado com as sua conta, aparece o botão de Entrar
                 <div className='user'>
                     <div className='icon'>
                         <IoMdLogIn />
@@ -53,7 +54,7 @@ const Nav = () => {
             <div className='last_header'>
                 <div className='user_profile'>
                     {
-                        // O perfil do user irá aparecer aqui
+                        //O perfil do user irá aparecer aqui
                         isAuthenticated ? 
                         <>
                         <div className='icon'>

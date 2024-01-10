@@ -7,28 +7,38 @@ import { AiOutlineSearch } from 'react-icons/ai'
 
 const Shop = () => {
 
-    //Página dos produtos da Loja
+    //Página dos produtos da Loja (URL da API)
     const url = 'https://api.sheety.co/680c2cd96be26e31c9062b1006efe397/restaurantMenu/menuItems';
-        
+    
+    //Estado para armazenar os produtos da loja
     const [shop, setProducts] = useState(null);
+
+    //Estados para filtrar os produtos por nome e categoria
     const [nome, setNome] = useState('');
     const [categoria, setCategoria] = useState('');
+
+    //Estado para indicar se a pesquisa está sendo feita por categoria
     const [catSearch, setCatSearch] = useState(false);
+
+    //Obtém o parâmetro 'filter' do URL usando o React Router
     const { filter } = useParams();
 
-    //A função seguinte é executada quando o valor é colocado em url
+    //Efeito para configurar o estado quando o URL muda
     useEffect(() => {
         setCatSearch(false);
         setCategoria(filter);
     }, [url]);
 
+    //Efeito para ir buscar os produtos quando a categoria muda
     useEffect(() => {
         getProducts();
     }, [categoria]);
 
+    //Função para obter produtos da API
     const getProducts = () => {
         axios.get(url)
             .then(response => {
+                //Filtra os produtos com base na categoria e no nome
                 catSearch?setProducts(
                     response.data.menuItems.filter(items =>
                         (categoria ? items.categoria === categoria : true) &&
@@ -44,10 +54,12 @@ const Shop = () => {
             })
     };
 
+    //Manipula a mudança no input de pesquisa por nome
     const handleChange = event => {
         setNome(event.target.value);
     };
 
+    //Manipula o clique no botão de pesquisa
     const procurarClick = event => {
         if (event) {
             event.preventDefault();
@@ -56,11 +68,13 @@ const Shop = () => {
         getProducts();
     };
 
+    //Manipula o clique nos filtros de categoria
     const filterClick = async (txt) => {
         setCatSearch(true);
         setCategoria(txt);
     };
 
+    //Manipula a tecla Enter para realizar a pesquisa
     const handleKeyDown = (event) => {
         if (event.key === 'Enter') {
             procurarClick(event);
