@@ -1,21 +1,14 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { MdLocalShipping } from 'react-icons/md'
-import { AiOutlineSearch } from 'react-icons/ai'
 import { IoMdLogIn } from 'react-icons/io'
 import { RiLogoutCircleLine } from 'react-icons/ri'
 import { FaUserAlt } from 'react-icons/fa'
 import { useAuth0 } from "@auth0/auth0-react"
-import {Link} from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import './nav.css'
 
-const Nav = ({ shop, onSearch }) => {
+const Nav = () => {
     const { loginWithRedirect, logout, user, isAuthenticated } = useAuth0();
-
-    const [searchQuery, setSearchQuery] = useState("");
-
-    const handleSearch = () => {
-        onSearch(searchQuery);
-    };
 
     return (
         <>
@@ -31,16 +24,8 @@ const Nav = ({ shop, onSearch }) => {
             <div className='mid_header'>
                 <div className='logo'>
                     <a href="/">
-                    <img src='images/logo.png' alt='logo'></img>
+                    <img src='/images/logo.png' alt='logo'></img>
                     </a>
-                </div>
-                <div className='search_box'>
-                    <input 
-                        type='text' 
-                        value={searchQuery} 
-                        onChange={(e) => setSearchQuery(e.target.value)}placeholder='search'>
-                    </input>
-                    <button onClick={handleSearch}><AiOutlineSearch /></button>
                 </div>
                 {
                     isAuthenticated ?
@@ -85,10 +70,10 @@ const Nav = ({ shop, onSearch }) => {
                 </div>
                 <div className='nav'>
                     <ul>
-                        <li><Link to='/Shop' className='link'>LOJA</Link></li>
-                        <li><Link to='/Shop' className='link'>PLAYSTATION</Link></li>
-                        <li><Link to='/Shop' className='link'>XBOX</Link></li>
-                        <li><Link to='/Shop' className='link'>NINTENDO</Link></li>
+                        <li><Link to={`/shop`} onClick={() => window.location.href = '/shop'} className='link'>LOJA</Link></li>
+                        <li><Link to={`/shop/PS5`} onClick={() => window.location.href = '/shop/PS5'} className='link'>PLAYSTATION</Link></li>
+                        <li><Link to={`/shop/XBOX`} onClick={() => window.location.href = '/shop/XBOX'} className='link'>XBOX</Link></li>
+                        <li><Link to={`/shop/Nintendo`} onClick={() => window.location.href = '/shop/Nintendo'} className='link'>NINTENDO</Link></li>
                     </ul>
                 </div>
             </div>

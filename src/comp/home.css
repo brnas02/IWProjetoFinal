@@ -13,7 +13,7 @@
 {
     max-width: 100%;
     height: 530px;
-    background: url('http://localhost:3000/images/ps5.webp');
+    background: url('/images/ps5.webp');
     background-size: 100%;
     padding: 70px 60px;
 }
@@ -46,7 +46,7 @@
     margin-top: 20px;
     max-width: 100%;
     height: 610px;
-    background: url('http://localhost:3000/images/xbox.png');
+    background: url('/images/xbox.png');
     background-size: 100%;
     padding: 70px 60px;
 }
@@ -78,7 +78,7 @@
     margin-top: 20px;
     max-width: 100%;
     height: 480px;
-    background: url('http://localhost:3000/images/nintendo.jpg');
+    background: url('/images/nintendo.jpg');
     background-size: 100%;
     padding: 70px 60px;
 }

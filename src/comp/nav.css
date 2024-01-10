@@ -40,41 +40,6 @@
     cursor: pointer;
     object-fit: cover;
 }
-.header .mid_header .search_box input
-{
-    padding: 10px 10px;
-    outline: none;
-    background: none;
-    border-top-left-radius: 10px;
-    border-bottom-left-radius: 10px;
-    width: 250px;
-    border: none;
-    background: #f6f7f8;
-    font-size: 14px;
-}
-.header .mid_header .search_box button
-{
-    padding: 10px 10px;
-    border-top-right-radius: 10px;
-    border-bottom-right-radius: 10px;
-    border: none;
-    outline: none;
-    border: 1px solid #0cc0df;
-    width: 50px;
-    background: #0cc0df;
-    color: #ffffff;
-    cursor: pointer;
-    font-size: 12px;
-    margin-right: 30px;
-    margin-top: 10px;
-    transition: 0.5s;
-    font-weight: 600;
-}
-.header .mid_header .search_box button:hover
-{
-    background: #fed700;
-    color: #0cc0df;
-}
 .header .mid_header .user
 {
     display: flex;
