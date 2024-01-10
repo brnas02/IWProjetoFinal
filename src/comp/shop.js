@@ -32,13 +32,13 @@ const Shop = () => {
                 catSearch?setProducts(
                     response.data.menuItems.filter(items =>
                         (categoria ? items.categoria === categoria : true) &&
-                        items.nome.includes(nome)
+                        items.nome.toLowerCase().includes(nome.toLowerCase())
                     )
                 )
                 :setProducts(
                     response.data.menuItems.filter(items =>
                         items.categoria.includes(categoria ? categoria : '') &&
-                        items.nome.includes(nome)
+                        items.nome.toLowerCase().includes(nome.toLowerCase())
                     )
                 );
             })
@@ -49,8 +49,10 @@ const Shop = () => {
     };
 
     const procurarClick = event => {
-        event.preventDefault();
-
+        if (event) {
+            event.preventDefault();
+        }
+    
         getProducts();
     };
 
@@ -59,10 +61,16 @@ const Shop = () => {
         setCategoria(txt);
     };
 
+    const handleKeyDown = (event) => {
+        if (event.key === 'Enter') {
+            procurarClick(event);
+        }
+    };
+
     return (
         <>
         <div className='search_box'>
-            <input type='text' placeholder='search' value={nome} onChange={handleChange}></input>
+            <input type='text' placeholder='search' value={nome} onChange={handleChange} onKeyDown={handleKeyDown}></input>
             <button onClick={procurarClick}><AiOutlineSearch /></button>
         </div>
         <div className='shop'>
