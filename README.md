@@ -1,8 +1,9 @@
-# React + Vite
+# Projeto Final de Introdução Web
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este projeto consiste na criação de uma página web criada em React. 
 
-Currently, two official plugins are available:
+A nossa escolha foi realizar uma loja de produtos, mais focada em tecnologia, propriamente em consolas.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+A página ainda apresenta muitas falhas, como ainda não é possível adicionar produtos ao carrinho de compras, nem encomendar produtos.
+
+![image](https://github.com/brnas02/IWProjetoFinal/assets/128045820/a612af10-d5ed-47d6-88d7-0ea09ad7b150)
